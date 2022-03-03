@@ -47,6 +47,6 @@ CREATE TABLE Client (
             productId char(6),
             FOREIGN KEY(productId) REFERENCES Product(productId),
             orderId char(6),
-            FOREIGN KEY(orderId) REFERENCES Order(orderId)
-            PRIMARY KEY (productId, orderId);
+            FOREIGN KEY(orderId) REFERENCES Order(orderId),
+            PRIMARY KEY (productId, orderId)
     );
