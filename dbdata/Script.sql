@@ -18,7 +18,7 @@ CREATE TABLE Client (
 
 
     CREATE TABLE Product (
-        productId char(6),
+        productId char(6) PRIMARY KEY,
         label VARCHAR(20),
         description VARCHAR(50),
         price DECIMAL(10,2),
@@ -48,4 +48,5 @@ CREATE TABLE Client (
             FOREIGN KEY(productId) REFERENCES Product(productId),
             orderId char(6),
             FOREIGN KEY(orderId) REFERENCES Order(orderId)
+            PRIMARY KEY (productId, orderId);
     );
